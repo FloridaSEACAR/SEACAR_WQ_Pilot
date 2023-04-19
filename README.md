@@ -37,8 +37,9 @@ Ordinary least square regression (OLS) and Pearson correlation analyses have bee
 
 Regression and correlation analysis are documented in:
 
-- [Covariates_Analysis_All](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_All.ipynb): Analysis with 2016-2018 data in all managed areas
-- [Covariates_Analysis_MA](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_MA.ipynb): Analysis with 2016-2018 data in Charlotte Harbor, Estero Bay and Big Bend
+- [Covariates_Analysis_All.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_All.ipynb): Analysis with 2016-2018 data in all five managed areas
+- [Covariates_Analysis_MA.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_MA.ipynb): Analysis with 2016-2018 data in all five managed areas
+- [Correlation_Covariates.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Correlation_Covariates.ipynb): Correlation between covariates with 2016-2018 data in all five managed areas
 
 ### 1b.2 Evaluation of Interpolation Methods
 The following interpolation methods are selected for evaluation:
@@ -61,3 +62,5 @@ Performance evaluation of interpolation methods are documented in:
 - [RK_Covariate_Assessment_CH.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_CH.ipynb): Evaluation of regression kriging with different covariates in Charlotte Harbor
 - [RK_Covariate_Assessment_EB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Estero Bay
 - [RK_Covariate_Assessment_BB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Big Bend
+- [RK_Covariate_Assessment_Biscayne.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Biscayne Bay
+- [RK_Covariate_Assessment_GTM.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Guana Tolomato Matanzas National Estuarine Research Reserve
