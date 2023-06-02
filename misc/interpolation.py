@@ -48,7 +48,7 @@ def extract_val_result(inLayer, index):
 
 
 def interpolation(method, input_point, out_raster, 
-                         z_field, out_ga_layer, extent, mask,
+                         z_field, out_ga_layer, extent, mask, ga_to_raster,
                          in_explanatory_rasters = None):
     
     start_time = time.time()
@@ -120,12 +120,12 @@ def interpolation(method, input_point, out_raster,
                                       out_raster   = out_raster,
                                      # transformation_type = 'EMPIRICAL',
                                     search_neighborhood = arcpy.SearchNeighborhoodSmoothCircular(smooth_r,0.5))
-            
+            arcpy.GALayerToRasters_ga(out_ga_layer, ga_to_raster,"PREDICTION_STANDARD_ERROR", None, c_size, 1, 1, "")
         ValStat = extract_val_result(out_ga_layer, method.upper())
         print("--- Time lapse: %s seconds ---" % (time.time() - start_time))
         return out_raster, ValStat
             
-# ---------------------- Empirical Bayesian Kriging ---------------------------
+# ---------------------- Regression Kriging ---------------------------
     elif method == "rk":
         with arcpy.EnvManager(extent = extent, mask = mask,outputCoordinateSystem = arcpy.SpatialReference(spatialref), cellSize = c_size, parallelProcessingFactor = parProFactor):
             out_surface_raster = arcpy.EBKRegressionPrediction_ga(in_features = input_point, 
@@ -135,6 +135,8 @@ def interpolation(method, input_point, out_raster,
                                                                   in_explanatory_rasters = in_explanatory_rasters,
                                                                    transformation_type = 'EMPIRICAL',
                                                                   search_neighborhood = arcpy.SearchNeighborhoodSmoothCircular(smooth_r,0.5))
+            # Convert GA layer to standard error of prediction raster
+            arcpy.GALayerToRasters_ga(out_ga_layer, ga_to_raster,"PREDICTION_STANDARD_ERROR", None, c_size, 1, 1, "")
         ValStat = extract_val_result(out_ga_layer, method.upper())
         print("--- Time lapse: %s seconds ---" % (time.time() - start_time))
         return out_raster, ValStat
@@ -172,3 +174,4 @@ def plot_covariate(Area,pt_Shp,extentShp,ra_fname,title, ax,fig):
         im = retted.get_images()[1]
         fig.colorbar(im, ax=ax,shrink=0.6)
         
+ 

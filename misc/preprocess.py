@@ -90,6 +90,21 @@ def preprocess(dis, con1, con2):
     return dfDis, dfCon
 
 
+# Select data in specific area, time period, parameter, and season
+# s_date,e_date needs to be in format mm/dd/yyyy format
+def select_aggr_area_season(df_all, s_date, e_date, area, para):
+    
+    df_all = df_all[(df_all['ParameterName']==para)&
+          (df_all['SampleDate']>pd.Timestamp(s_date).date())&
+           (df_all['SampleDate']<pd.Timestamp(e_date).date())&
+            (df_all['ManagedAreaName']==area)]
+    
+    df_mean = df_all.groupby(['Latitude_DD','Longitude_DD'])["ResultValue"].agg("mean").reset_index()    
+    gdf = gpd.GeoDataFrame(df_mean, geometry = gpd.points_from_xy(df_mean.Longitude_DD, df_mean.Latitude_DD), crs="EPSG:4326")
+    
+    return df_mean, gdf
+
+
 def combine_dis_con_dry(df_dis,df_con, year):
     
     year_start = str(int(year)-1)

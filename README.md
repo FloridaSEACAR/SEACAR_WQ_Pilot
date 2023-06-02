@@ -19,12 +19,12 @@ Maps are created to show the spatial distribution of the WQ samples.
 3.	Maps showing locations of different continuous stations are created for each managed area.
 
 Analyses in Task 1a are shared in:
--	[SEACAR_WQ_Exploratory_Analysis_Dis.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/SEACAR_WQ_Exploratory_Analysis_Dis.ipynb): Temporal analysis of discrete data
--	[Sample_Location_Analysis_Dis.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Sample_Location_Analysis_Dis.ipynb): Spatial locations of discrete data
--	[SEACAR_WQ_Exploratory_Analysis_Con.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/SEACAR_WQ_Exploratory_Analysis_Con.ipynb): Temporal analysis of continuous data: all stations
--	[Sample_Location_Analysis_Con.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Sample_Location_Analysis_Con.ipynb): Spatial locations of discrete data: all stations
--	[SEACAR_WQ_Exploratory_Analysis_Con_Stations.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/SEACAR_WQ_Exploratory_Analysis_Con_Stations.ipynb): Temporal analysis of continuous data: separate by station
--	[Sample_Location_Analysis_Con_Stations.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Sample_Location_Analysis_Con_Stations.ipynb): Spatial locations of discrete data: separate by station
+-	[SEACAR_WQ_Exploratory_Analysis_Dis.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/SEACAR_WQ_Exploratory_Analysis_Dis.ipynb): Temporal analysis of discrete data
+-	[Sample_Location_Analysis_Dis.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/Sample_Location_Analysis_Dis.ipynb): Spatial locations of discrete data
+-	[SEACAR_WQ_Exploratory_Analysis_Con.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/SEACAR_WQ_Exploratory_Analysis_Con.ipynb): Temporal analysis of continuous data: all stations
+-	[Sample_Location_Analysis_Con.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/Sample_Location_Analysis_Con.ipynb): Spatial locations of discrete data: all stations
+-	[SEACAR_WQ_Exploratory_Analysis_Con_Stations.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/SEACAR_WQ_Exploratory_Analysis_Con_Stations.ipynb): Temporal analysis of continuous data: separate by station
+-	[Sample_Location_Analysis_Con_Stations.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Exploratory_Analysis/Sample_Location_Analysis_Con_Stations.ipynb): Spatial locations of discrete data: separate by station
 
 # Task 1b: Spatial Interpolation
 
@@ -37,9 +37,9 @@ Ordinary least square regression (OLS) and Pearson correlation analyses have bee
 
 Regression and correlation analysis are documented in:
 
-- [Covariates_Analysis_All.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_All.ipynb): Analysis with 2016-2018 data in all five managed areas
-- [Covariates_Analysis_MA.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis_MA.ipynb): Analysis with 2016-2018 data in all five managed areas
-- [Correlation_Covariates.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Correlation_Covariates.ipynb): Correlation between covariates with 2016-2018 data in all five managed areas
+- [Covariates_Analysis_All.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis/Covariates_Analysis_All.ipynb): Analysis with 2016-2018 data in all five managed areas
+- [Covariates_Analysis_MA.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis/Covariates_Analysis_MA.ipynb): Analysis with 2016-2018 data in all five managed areas
+- [Correlation_Covariates.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Covariates_Analysis/Correlation_Covariates.ipynb): Correlation between covariates with 2016-2018 data in all five managed areas
 
 ### 1b.2 Evaluation of Interpolation Methods
 The following interpolation methods are selected for evaluation:
@@ -56,11 +56,11 @@ The interpolation programs call functions from ArcGIS python interface (arcpy). 
 
 Performance evaluation of interpolation methods are documented in:
 
-- [Interpolation_ArcGIS_CH.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Interpolation_ArcGIS_CH.ipynb): Interpolation evaluation in Charlotte Harbor
-- [Interpolation_ArcGIS_Estero_Bay.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Interpolation_ArcGIS_Estero_Bay.ipynb): Interpolation evaluation in Estero Bay
-- [Interpolation_ArcGIS_Big_Bend.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Interpolation_ArcGIS_Big_Bend.ipynb): Interpolation evaluation in Big Bend
-- [RK_Covariate_Assessment_CH.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_CH.ipynb): Evaluation of regression kriging with different covariates in Charlotte Harbor
-- [RK_Covariate_Assessment_EB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Estero Bay
-- [RK_Covariate_Assessment_BB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Big Bend
-- [RK_Covariate_Assessment_Biscayne.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Biscayne Bay
-- [RK_Covariate_Assessment_GTM.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Guana Tolomato Matanzas National Estuarine Research Reserve
+- [Interpolation_ArcGIS_CH.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/Interpolation_ArcGIS_CH.ipynb): Interpolation evaluation in Charlotte Harbor
+- [Interpolation_ArcGIS_Estero_Bay.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/Interpolation_ArcGIS_Estero_Bay.ipynb): Interpolation evaluation in Estero Bay
+- [Interpolation_ArcGIS_Big_Bend.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/Interpolation_ArcGIS_Big_Bend.ipynb): Interpolation evaluation in Big Bend
+- [RK_Covariate_Assessment_CH.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_CH.ipynb): Evaluation of regression kriging with different covariates in Charlotte Harbor
+- [RK_Covariate_Assessment_EB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Estero Bay
+- [RK_Covariate_Assessment_BB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Big Bend
+- [RK_Covariate_Assessment_Biscayne.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Biscayne Bay
+- [RK_Covariate_Assessment_GTM.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Guana Tolomato Matanzas National Estuarine Research Reserve
