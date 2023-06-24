@@ -64,3 +64,31 @@ Performance evaluation of interpolation methods are documented in:
 - [RK_Covariate_Assessment_BB.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_EB.ipynb): Evaluation of regression kriging with different covariates in Big Bend
 - [RK_Covariate_Assessment_Biscayne.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Biscayne Bay
 - [RK_Covariate_Assessment_GTM.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Method_Comparison/RK_Covariate_Assessment_Biscayne.ipynb): Evaluation of regression kriging with different covariates in Guana Tolomato Matanzas National Estuarine Research Reserve
+
+### 1b.3 Automated Interpolation
+Regression Kriging is applied to interpolate water quality parameters (Dissolved Oxygen, Total Nitrogen, Salinity, Secchi Depth, and Turbidity) in all seasons defined in this [table](https://github.com/FloridaSEACAR/WQ_Summaries/blob/gh-pages/OEATUSF_Geospatial_TempSeasons.csv) for all managed areas. The interpolation algorithm utilizes the optimal combination of covariates identified in Task 1b.2.
+
+- [Automate_Interpolation.ipynb](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Spatial_Interpolation/Automate_Interpolation.ipynb): The main function that calls the interpolation function in autointerpolation.py. The program loads preprocessed data to save computing time.
+
+- [autointerpolation.py](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/misc/autointerpolation.py): The interpolation function that can be applied to selected data points. The interpolation function is used in the main function to interpolate maps in all seasons.
+
+# Task 1c: Gap Analysis
+### 1c.1 Overall Visualization
+Kernel density estimation (KDE) maps and aggregated standard error of prediction (SEP) maps are created in pairs for visual detection of sampling gaps and redundancies. The KDE and SEP maps are created from all data points from 2015 to 2019 for each parameter and in each managed area.
+
+[Gap_Analysis_Part1.ipynb](https://nbviewer.org/github/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part1.html): Pairs of KDE and SEP maps for all sampling points from 2015 to 2019.
+
+### 1c.2 Seasonal Visualization
+Kernel density estimation (KDE) maps and aggregated standard error of prediction (SEP) maps are created for spring, summer, fall and winter from 2015 to 2019 for each parameter and in each managed area.
+
+[Gap_Analysis_Part2.md](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part2.md): Pairs of seasonal KDE and SEP maps. The executable Python codes to generate these maps can be found [here](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part2.ipynb)
+
+### 1c.3 Identify Redundancy and Gaps
+The KDE and SEP maps generated in Task 1c.1 are reclassified into low, neutral and high using 25 and 75 percentile thresholds. Then, the KDE and SEP maps are overlaid to identify redundant sampling points and gap areas according to the table below.
+
+| Kernel density | Standard error of prediction | Implication | Output |
+| ----------- | ----------- | ----------- | ----------- |
+| High      | High | Natural variation, potentially seasonal issue, or might be unexplained variation| Display seasonal maps for SEACAR team to consider explanation |
+| High   | Low | Potential redundancy       | Identify specific sampling points within these areas |
+| Low   | Low | No change needed / low priority       |Reference only |
+| Low   | High | Potential need for more stations       | Identify areas on the map |
