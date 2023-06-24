@@ -76,12 +76,12 @@ Regression Kriging is applied to interpolate water quality parameters (Dissolved
 ### 1c.1 Overall Visualization
 Kernel density estimation (KDE) maps and aggregated standard error of prediction (SEP) maps are created in pairs for visual detection of sampling gaps and redundancies. The KDE and SEP maps are created from all data points from 2015 to 2019 for each parameter and in each managed area.
 
-[Gap_Analysis_Part1.ipynb](https://nbviewer.org/github/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part1.html): Pairs of KDE and SEP maps for all sampling points from 2015 to 2019.
+[Gap_Analysis_Part1.ipynb](Gap_Analysis/Gap_Analysis_Part1.html): Pairs of KDE and SEP maps for all sampling points from 2015 to 2019.
 
 ### 1c.2 Seasonal Visualization
 Kernel density estimation (KDE) maps and aggregated standard error of prediction (SEP) maps are created for spring, summer, fall and winter from 2015 to 2019 for each parameter and in each managed area.
 
-[Gap_Analysis_Part2.md](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part2.md): Pairs of seasonal KDE and SEP maps. The executable Python codes to generate these maps can be found [here](https://github.com/qiang-yi/SEACAR_WQ_Pilot/blob/main/Gap_Analysis/Gap_Analysis_Part2.ipynb)
+[Gap_Analysis_Part2.md](Gap_Analysis/Gap_Analysis_Part2.md): Pairs of seasonal KDE and SEP maps. The executable Python codes to generate these maps can be found [here](Gap_Analysis/Gap_Analysis_Part2.ipynb)
 
 ### 1c.3 Identify Redundancy and Gaps
 The KDE and SEP maps generated in Task 1c.1 are reclassified into low, neutral and high using 25 and 75 percentile thresholds. Then, the KDE and SEP maps are overlaid to identify redundant sampling points and gap areas according to the table below.
